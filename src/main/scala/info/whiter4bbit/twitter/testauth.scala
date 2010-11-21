@@ -12,7 +12,7 @@ object TwitterCli {
     var pin = Console.readLine
     val accessToken = oauth.getAccessToken(pin, requestToken)
     println("We got access token:" + accessToken)
-    val statuses = oauth.performGet("http://api.twitter.com/1/statuses/home_timeline.xml", Map(), accessToken)
+    val statuses = oauth.performGet("http://api.twitter.com/1/statuses/home_timeline.xml", Map(), Some(accessToken))
     println("Statuses:" + statuses)
   }
 }
