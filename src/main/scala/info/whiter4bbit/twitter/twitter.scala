@@ -51,7 +51,7 @@ class OAuth(credentials: AppCredentials) {
                                 Map("oauth_token"->requestToken.getOauthToken,
                                     "oauth_verifier"->pin)
     val response = doPost(accessTokenRequestURL, authRequestParameters, Some(requestToken))
-    parseToeken(response)
+    parseToken(response)
   }
 
   def performGet(requestURL: String, params: Map[String, String], requestToken: Option[Token]) = {
