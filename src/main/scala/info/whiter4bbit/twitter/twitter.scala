@@ -30,7 +30,6 @@ class OAuth(credentials: AppCredentials) {
                                      "oauth_nonce"->oauthNonce,
                                      "oauth_signature_method"->"HMAC-SHA1",
                                      "oauth_timestamp"->timestamp.toString)
-
   def parseToken(response: String): Token = {
     var oauthToken = ""
     var oauthTokenSecret = ""
@@ -102,4 +101,5 @@ class OAuth(credentials: AppCredentials) {
     }
     response
   }
+
 }
